@@ -1,0 +1,112 @@
+{
+    "name": "haitech/cms",
+    "description": "CMS core source",
+    "type": "library",
+    "license": "Apache-2.0",
+    "require": {
+        "php": "^8.0",
+        "laravel/framework": "^8.57",
+        "barryvdh/laravel-dompdf": "^0.9.0",
+        "botble/assets": "^1.0",
+        "predis/predis": "^1.1",
+        "intervention/image": "^2.6",
+        "kris/laravel-form-builder": "1.16.x-dev",
+        "laravelcollective/html": "^6.2",
+        "xantios/mimey": "^2.2",
+        "tightenco/ziggy": "^1.4",
+        "yajra/laravel-datatables-buttons": "^4.13",
+        "yajra/laravel-datatables-oracle": "^9.18",
+        "guzzlehttp/guzzle": "^6.0|^7.0",
+        "laravel/passport": "^9.0|^10.0",
+        "knuckleswtf/scribe": "^2.0",
+        "fruitcake/laravel-cors": "^2.0",
+        "mews/purifier": "^3.3"
+    },
+    "authors": [
+        {
+            "name": "Haitech",
+            "email": "info@haitech.co"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Haitech\\Support\\": "src/core/support/src",
+            "Haitech\\ACL\\": "src/core/acl/src",
+            "Haitech\\Base\\": "src/core/base/src",
+            "Haitech\\Dashboard\\": "src/core/dashboard/src",
+            "Haitech\\Media\\": "src/core/media/src",
+            "Haitech\\Setting\\": "src/core/setting/src",
+            "Haitech\\Table\\": "src/core/table/src",
+            "Haitech\\JsValidation\\": "src/core/js-validation/src",
+            "Haitech\\Chart\\": "src/core/chart/src",
+            "Haitech\\Api\\": "src/packages/api/src",
+            "Haitech\\Menu\\": "src/packages/menu/src",
+            "Haitech\\Optimize\\": "src/packages/optimize/src",
+            "Haitech\\Page\\": "src/packages/page/src",
+            "Haitech\\PluginManagement\\": "src/packages/plugin-management/src",
+            "Haitech\\Revision\\": "src/packages/revision/src",
+            "Haitech\\SeoHelper\\": "src/packages/seo-helper/src",
+            "Haitech\\Shortcode\\": "src/packages/shortcode/src",
+            "Haitech\\Sitemap\\": "src/packages/sitemap/src",
+            "Haitech\\Slug\\": "src/packages/slug/src",
+            "Haitech\\Theme\\": "src/packages/theme/src",
+            "Haitech\\Widget\\": "src/packages/widget/src"
+        }
+    },
+
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Haitech\\Base\\Providers\\BaseServiceProvider",
+                "Haitech\\Base\\Providers\\CommandServiceProvider",
+                "Haitech\\Base\\Providers\\EventServiceProvider",
+                "Haitech\\Base\\Providers\\BreadcrumbsServiceProvider",
+                "Haitech\\Base\\Providers\\ComposerServiceProvider",
+                "Haitech\\Base\\Providers\\MailConfigServiceProvider",
+                "Haitech\\Base\\Providers\\FormServiceProvider",
+                "Haitech\\Support\\Providers\\SupportServiceProvider",
+                "Haitech\\Table\\Providers\\TableServiceProvider",
+                "Haitech\\ACL\\Providers\\AclServiceProvider",
+                "Haitech\\Dashboard\\Providers\\DashboardServiceProvider",
+                "Haitech\\Media\\Providers\\MediaServiceProvider",
+                "Haitech\\JsValidation\\Providers\\JsValidationServiceProvider",
+                "Haitech\\Chart\\Providers\\ChartServiceProvider",
+                "Haitech\\Api\\Providers\\ApiServiceProvider",
+                "Haitech\\Menu\\Providers\\MenuServiceProvider",
+                "Haitech\\Optimize\\Providers\\OptimizeServiceProvider",
+                "Haitech\\Page\\Providers\\PageServiceProvider",
+                "Haitech\\PluginManagement\\Providers\\PluginManagementServiceProvider",
+                "Haitech\\Revision\\Providers\\RevisionServiceProvider",
+                "Haitech\\SeoHelper\\Providers\\SeoHelperServiceProvider",
+                "Haitech\\Shortcode\\Providers\\ShortcodeServiceProvider",
+                "Haitech\\Sitemap\\Providers\\SitemapServiceProvider",
+                "Haitech\\Slug\\Providers\\SlugServiceProvider",
+                "Haitech\\Theme\\Providers\\ThemeServiceProvider",
+                "Haitech\\Theme\\Providers\\RouteServiceProvider",
+                "Haitech\\Widget\\Providers\\WidgetServiceProvider"
+            ],
+            "aliases": {
+                "Assets": "Haitech\\Base\\Facades\\AssetsFacade",
+                "BaseHelper": "Haitech\\Base\\Facades\\BaseHelperFacade",
+                "MetaBox": "Haitech\\Base\\Facades\\MetaBoxFacade",
+                "Action": "Haitech\\Base\\Facades\\ActionFacade",
+                "Filter": "Haitech\\Base\\Facades\\FilterFacade",
+                "EmailHandler": "Haitech\\Base\\Facades\\EmailHandlerFacade",
+                "Breadcrumbs": "Haitech\\Base\\Facades\\BreadcrumbsFacade",
+                "JsValidator": "Haitech\\JsValidation\\Facades\\JsValidatorFacade",
+                "Menu": "Haitech\\Menu\\Facades\\MenuFacade",
+                "SeoHelper": "Haitech\\SeoHelper\\Facades\\SeoHelperFacade",
+                "SlugHelper": "Haitech\\Slug\\Facades\\SlugHelperFacade",
+                "Theme": "Haitech\\Theme\\Facades\\ThemeFacade",
+                "ThemeOption": "Haitech\\Theme\\Facades\\ThemeOptionFacade",
+                "ThemeManager": "Haitech\\Theme\\Facades\\ManagerFacade",
+                "AdminBar": "Haitech\\Theme\\Facades\\AdminBarFacade",
+                "SiteMapManager": "Haitech\\Theme\\Facades\\SiteMapManagerFacade",
+                "Widget": "Haitech\\Widget\\Facades\\WidgetFacade",
+                "WidgetGroup": "Haitech\\Widget\\Facades\\WidgetGroupFacade"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
